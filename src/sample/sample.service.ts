@@ -11,6 +11,7 @@ export class SampleService {
     @InjectRepository(Sample) private sampleRepository: Repository<Sample>,
   ) {}
 
+  // shu funksia database-a insert edyar
   async create(createSampleDto: CreateSampleDto) {
     const newData = new Sample();
     newData.body = createSampleDto.body;
@@ -18,6 +19,7 @@ export class SampleService {
     return await this.sampleRepository.save(newData);
   }
 
+  // bu funksiya hemmesini SELECT edyar
   async findAll() {
     const result = await this.sampleRepository.find();
     return result;

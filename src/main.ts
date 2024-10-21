@@ -25,7 +25,7 @@ async function bootstrap() {
   app.enableCors({
     origin: '*',
     allowedHeaders: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS', // Allow all methods
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   });
 
   const document = SwaggerModule.createDocument(app, config);
